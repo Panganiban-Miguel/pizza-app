@@ -33,12 +33,45 @@ function Pizza({name,image,price,description}){
     </div>
 }
 
-const pizzas = [{name:"Foccacia",image:"\\pizzas\\focaccia.jpg",price:6,description:"Bread with Italian olive oil and rosemary."},
-    {name:"Funghi", image:"\\pizzas\\funghi.jpg", price:12, description:"Tomato, mozzarella, mushrooms and onions."},
-    {name:"Margherita", image:"\\pizzas\\margherita.jpg", price:10, description:"Tomato and mozzarella."},
-    {name:"Prosciutto", image:"\\pizzas\\prosciutto.jpg", price:18, description:"Tomato, mozzarella, ham, aragula and burrata cheese."},
-    {name:"Salamino", image:"\\pizzas\\salamino.jpg", price:15, description:"Tomato, mozzarella and pepperoni."},
-    {name:"Spinaci", image:"\\pizzas\\spinaci.jpg", price:12, description:"Tomato, mozzarella, spinach and ricotta cheese."}];
+const pizzas = [
+  {
+    name: "Foccacia",
+    image: process.env.PUBLIC_URL + "/pizzas/focaccia.jpg",
+    price: 6,
+    description: "Bread with Italian olive oil and rosemary."
+  },
+  {
+    name: "Funghi",
+    image: process.env.PUBLIC_URL + "/pizzas/funghi.jpg",
+    price: 12,
+    description: "Tomato, mozzarella, mushrooms and onions."
+  },
+  {
+    name: "Margherita",
+    image: process.env.PUBLIC_URL + "/pizzas/margherita.jpg",
+    price: 10,
+    description: "Tomato and mozzarella."
+  },
+  {
+    name: "Prosciutto",
+    image: process.env.PUBLIC_URL + "/pizzas/prosciutto.jpg",
+    price: 18,
+    description: "Tomato, mozzarella, ham, arugula and burrata cheese."
+  },
+  {
+    name: "Salamino",
+    image: process.env.PUBLIC_URL + "/pizzas/salamino.jpg",
+    price: 15,
+    description: "Tomato, mozzarella and pepperoni."
+  },
+  {
+    name: "Spinaci",
+    image: process.env.PUBLIC_URL + "/pizzas/spinaci.jpg",
+    price: 12,
+    description: "Tomato, mozzarella, spinach and ricotta cheese."
+  }
+];
+
 const pizzaList = pizzas.map((pizza, index) => <Pizza key={index} name={pizza.name} image={pizza.image} price={pizza.price} description={pizza.description} />)
 
 function Menu(){
@@ -46,12 +79,12 @@ function Menu(){
     <h2 className='menu'>Our Menu</h2>
 
     <Tagline />
-    {/* <Pizza name="Focaccia" image="\pizzas\focaccia.jpg" price=6 description="Bread with Italian olive oil and rosemary." />
-    <Pizza name="Funghi" image="\pizzas\funghi.jpg" price=12 description="Tomato, mozzarella, mushrooms and onions." />
-    <Pizza name="Margherita" image="\pizzas\margherita.jpg" price=10 description="Tomato and mozzarella." />
-    <Pizza name="Prosciutto" image="\pizzas\prosciutto.jpg" price=18 description="Tomato, mozzarella, ham, aragula and burrata cheese." />
-    <Pizza name="Salamino" image="\pizzas\salamino.jpg" price=15 description="Tomato, mozzarella and pepperoni." />
-    <Pizza name="Spinaci" image="\pizzas\spinaci.jpg" price=12 description="Tomato, mozzarella, spinach and ricotta cheese." /> */}
+    {/* <Pizza name="Focaccia" image="\pizzas\focaccia.jpg" price={6} description="Bread with Italian olive oil and rosemary." />
+    <Pizza name="Funghi" image="\pizzas\funghi.jpg" price={12} description="Tomato, mozzarella, mushrooms and onions." />
+    <Pizza name="Margherita" image="\pizzas\margherita.jpg" price={10} description="Tomato and mozzarella." />
+    <Pizza name="Prosciutto" image="\pizzas\prosciutto.jpg" price={18} description="Tomato, mozzarella, ham, aragula and burrata cheese." />
+    <Pizza name="Salamino" image="\pizzas\salamino.jpg" price={15} description="Tomato, mozzarella and pepperoni." />
+    <Pizza name="Spinaci" image="\pizzas\spinaci.jpg" price={12} description="Tomato, mozzarella, spinach and ricotta cheese." /> */}
     <div className="pizzas">{pizzaList}</div>
     </div>
 }
